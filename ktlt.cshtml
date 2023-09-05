@@ -1,0 +1,38 @@
+@page
+@model KTLT2023.page 
+@{int tu1=0;
+  int mau1=1;
+  int tu2=0;
+  int mau2=0;
+  string chuoi = string.Empty;  
+if(Request.Method=="POST")
+<!--Get data-->
+{ tu1=int.Parse(Request.Form["tu1"]);
+tu2=inty.Parse(Request.Form["mau1"]);
+tu2=int.Parse(Request.Form["tu2"]);
+mau=int.Parse(Request.Form["mau2"]);
+
+<!-- Tinh-->
+int tu,mau;
+tu=tu1*mau2+tu2*mau1;
+mau=mau1*mau2;
+<!--Ket qua-->
+chuoi=$"Ket qua la{tu}/{mau}";}}
+
+
+<form>
+<label for="tu1">Tu 1</label><br>
+
+<input type="number" id="tu1" name="tu 1" value="@tu1"><br><br>
+<label for="mau1">Mau 1</label><br>
+
+<input type="number" id="mau1" name="mau1" value="@mau1"><br><br>
+<label for="tu2">Tu 2</label><br>
+
+<input type="number" id="tu2" name="tu2" value="@tu2"><br><br>
+<label for="mau2">Mau 2</label><br>
+
+<input type="number" id="mau2" name="mau2" value="@mau2"><br><br>
+<button type="submit"> Sent</button>
+</form><br>
+@chuoi
